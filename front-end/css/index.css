@@ -32,7 +32,7 @@ body {
 }
 
 .login-container h1 {
-    color: var(--color-primary-200);
+    color: var(--color-primary-300);
     font-size: 18px;
     margin: 10px;
     padding: 0px;
@@ -62,7 +62,7 @@ body {
 
 .login-input-container > input:focus, input:hover {
     outline: none;
-    box-shadow: 0 0 10px var(--color-surface-600);
+    box-shadow: 0 0 10px var(--color-surface-200);
 }
 
 #login-error {
@@ -81,7 +81,7 @@ body {
 }
 
 #login-button {
-    background-color: var(--color-primary-500);
+    background-color: var(--color-primary-300);
     color: var(--color-surface-200);
     margin: 5px;
     padding: 10px;
@@ -91,5 +91,5 @@ body {
 }
 
 #login-button:hover {
-    box-shadow: 0 0 10px var(--color-surface-500);
+    box-shadow: 0 0 10px var(--color-primary-100);
 }

@@ -3,20 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Book Store</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/root.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        <h1>Book Store</h1>
-        <div class="home-login-container">
-            <a href="login.html" class="button">Login</a>
-        </div>
-        <div class="home-books-container">
-            <a href="books.html" class="button">Books</a>
-        </div>
+        <div class="login-container dark-mode">
+            <h1>Login</h1>
+            <div class="username-container login-input-container">
+                <input type="text" id="username-input" placeholder="Username">
+            </div>
+            <div class="password-container login-input-container">
+                <input type="password" id="password-input" placeholder="Password">
+            </div>
+            <div id="login-error"></div>
 
-        <script src="" async defer></script>
+            <div class="login-footer">
+                <a href="#">Forgot Password</a>
+                <a href="#">Sign Up</a>
+            </div>
+
+
+            <!-- Need to change style so the button is the opposite to rest of site-->
+            <button id="login-button" onclick="loginAttempt()">Log In</button>
+        </div>
+        <script src="js/index.js" async defer></script>
     </body>
 </html>

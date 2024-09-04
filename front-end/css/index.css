@@ -1,0 +1,95 @@
+:root {
+    --primary-dark: #3d3d3d;
+    --primary-light: #565656;
+    --primary-accent: #f5f5f5;
+    --primary-font-dark: #2d2d2d;
+    --primary-font-light: #b9b9b9;
+    --color-fail: #ec3535;
+}
+
+::placeholder {
+    color: var(--color-surface-500);
+    user-select: none;
+}
+
+body {
+    background-color: var(--color-surface-200);
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    height: 100svh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-300);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.login-container h1 {
+    color: var(--color-primary-200);
+    font-size: 18px;
+    margin: 10px;
+    padding: 0px;
+}
+
+.login-container a {
+    color: var(--color-primary-200);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.login-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-input-container > input {
+    background-color: var(--color-surface-mixed-600);
+    color: var(--color-surface-400);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--color-surface-200);
+}
+
+.login-input-container > input:focus, input:hover {
+    outline: none;
+    box-shadow: 0 0 10px var(--color-surface-600);
+}
+
+#login-error {
+    color: var(--color-fail);
+    font-size: 8px;
+    margin: 0 10px;
+}
+
+.login-footer {
+    color: var(--color-primary-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px;
+    text-decoration: underline;
+}
+
+#login-button {
+    background-color: var(--color-primary-500);
+    color: var(--color-surface-200);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--color-primary-100);
+    cursor: pointer;
+}
+
+#login-button:hover {
+    box-shadow: 0 0 10px var(--color-surface-500);
+}

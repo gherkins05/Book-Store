@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Book Store Books</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!---------------------------------------------------------->
+        <div id="book-template" style="display: none;">
+            <div class="book-container not-in-reading-list">
+
+                <div class="book-header">Title</div>
+                <div class="book-body">
+                    <div class="book-author">Author</div>
+                    <div class="book-genre">Genre</div>
+                </div>
+                <div class="book-footer">
+                    <div class="book-button add-book">+</div>
+
+                    <div class="footer-content">
+                        <div class="book-price">Price</div>
+                        <div class="book-id" style="display:none;"></div>
+                    </div>
+
+                    <div class="book-button remove-book">-</div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------->
+        <h1>Books</h1>
+        <header>
+            <div class="profile-widget-container">
+                <div class="dropdown book-filter">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reading List
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Any</a>
+                        <a class="dropdown-item" href="#">My reading list</a>
+                        <a class="dropdown-item" href="#">Not in my reading list</a>
+                    </div>
+                </div>
+                <div class="dropdown book-filter">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Genre
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Any</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <div class="dropdown book-filter">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Price
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Any</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <a class="profile-widget-name-container" id="account-name">Log In</a>
+                <div class="profile-widget-icon-container login-failed" id="login-identifier"></div>
+            </div>
+        </header>
+        <div class="content-container" id="content-container">
+            <div class="books-filter-container">
+                <div class="book-filter-container">
+                    <ul class="book-filters">
+                        <li class="book-filters-item">
+                            <ul class="book-filter-list">
+                                <li class="book-filter-header">Reading List</li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="MRL-FLS">My Reading List</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="myReadingList" id="MRL-FLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="NMRL-FLS">Not My Reading List</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="notMyReadingList" id="NMRL-FLS">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="book-filters-item">
+                            <ul class="book-filter-list">
+                                <li class="book-filter-header">Genre</li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="Fic-RLS">Fiction</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="Fiction" id="Fic-RLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="Hor-RLS">Horror</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="Horror" id="Hor-RLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="Rom-RLS">Romance</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="Romance" id="Rom-RLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="ScF-RLS">Science Fiction</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="Science Fiction" id="ScF-RLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="Fan-RLS">Fantasy</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="Fantasy" id="Fan-RLS">
+                                </li>
+                                <li class="book-filter-content">
+                                    <label class="form-check-label book-filter" for="His-RLS">History</label>
+                                    <input class="form-check-input book-filter-selector" type="checkbox" value="History" id="His-RLS">
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="books-container" id="books-container"></div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="js/books.js"></script>
+    </body>
+</html>

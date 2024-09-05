@@ -3,7 +3,7 @@
     --color-primary-100:  #673ab7;
     --color-primary-200:  #7a4fbf;
     --color-primary-300:  #8c64c8;
-    --color-primary-400:  #9d79d0;
+    --color-primary-400:  #A17FD2;
     --color-primary-500:  #ae8fd8;
     --color-primary-600:  #bfa5e0;
     /** CSS DARK THEME SURFACE COLORS */
@@ -19,5 +19,12 @@
     --color-surface-mixed-300:  #46434c;
     --color-surface-mixed-400:  #5e5b63;
     --color-surface-mixed-500:  #77747b;
-    --color-surface-mixed-600:  #908e94; 
+    --color-surface-mixed-600:  #908e94;
+    /** CSS FONT SIZES */
+    --font-size-small: 10px;
+    --font-size-medium: 12px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 20px;
+    --font-size-xxlarge: 24px;
+
 }

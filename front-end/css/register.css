@@ -14,7 +14,7 @@ body {
     height: 100svh;
 }
 
-.login-container {
+.register-container {
     display: flex;
     flex-direction: column;
     background-color: var(--color-surface-300);
@@ -22,27 +22,27 @@ body {
     padding: 10px;
 }
 
-.login-container h1 {
+.register-container h1 {
     color: var(--color-primary-400);
     font-size: var(--font-size-xxlarge);
     margin: 10px;
     padding: 0px;
 }
 
-.login-container a {
+.register-container a {
     color: var(--color-primary-300);
     text-decoration: none;
     font-size: var(--font-size-medium);
 }
 
-.login-input-container {
+.register-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.login-input-container > input {
+.register-input-container > input {
     background-color: var(--color-surface-mixed-600);
     color: var(--color-surface-400);
     font-size: var(--font-size-xlarge);
@@ -52,18 +52,18 @@ body {
     border: 1px solid var(--color-surface-200);
 }
 
-.login-input-container > input:focus, input:hover {
+.register-input-container > input:focus, input:hover {
     outline: none;
     box-shadow: 0 0 10px var(--color-surface-200);
 }
 
-#login-error {
+#register-error {
     color: var(--color-fail);
     font-size: var(--font-size-small);
     margin: 0 10px;
 }
 
-.login-footer {
+.register-footer {
     color: var(--color-primary-200);
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@ body {
     text-decoration: underline;
 }
 
-#login-button {
+#register-button {
     background-color: var(--color-primary-400);
     color: var(--color-surface-200);
     margin: 5px;
@@ -83,6 +83,12 @@ body {
     font-size: var(--font-size-large);
 }
 
-#login-button:hover {
+#register-button:hover {
     box-shadow: 0 0 10px var(--color-primary-100);
+}
+
+#username-error {
+    color: var(--color-fail);
+    font-size: var(--font-size-small);
+    margin: 0 10px;
 }

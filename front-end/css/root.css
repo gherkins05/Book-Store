@@ -27,4 +27,6 @@
     --font-size-xlarge: 20px;
     --font-size-xxlarge: 24px;
 
+    /** CSS DARK THEME FAIL COLOR */
+    --color-fail: #ff0000;
 }

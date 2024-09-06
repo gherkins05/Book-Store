@@ -44,7 +44,7 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
 // Middleware to enforce JSON Accept header
 app.use((req, res, next) => {
     if (req.headers.accept.indexOf('application/json') === -1) {
-        return res.status(406).send('Not Acceptable');
+        return res.status(406).send({ message: 'Not Acceptable'});
     }
     next();
 });
@@ -53,7 +53,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     if (req.method === 'POST' || req.method === 'PUT') {
         if (!req.is('application/json')) {
-            return res.status(415).send('Unsupported Media Type');
+            return res.status(415).send({ message: 'Unsupported Media Type' });
         }
     }
     next();
@@ -138,7 +138,7 @@ app.post('/api/register', async (req, res) => {
         // Add check for password criteria
         const passwordError = validatePassword(password, username);
         if (passwordError) {
-            return res.status(400).send(passwordError);
+            return res.status(400).send({ message: passwordError});
         }
 
         // Add the data to the database
@@ -156,7 +156,7 @@ app.post('/api/register', async (req, res) => {
 
     } catch (err) {
         console.error(err);
-        return res.status(500).send('Internal Server Error');
+        return res.status(500).send({ message: 'Internal Server Error'});
     }
 });
 
@@ -192,13 +192,12 @@ app.post('/api/login', async (req, res) => {
 
         // Create and send token
         const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: '10m' });
-
         return res.status(200).send({ token: token });
 
 
     } catch (err) {
         console.error(err);
-        return res.status(500).send('Internal Server Error');
+        return res.status(500).send({ message: 'Internal Server Error'});
     }
 });
 

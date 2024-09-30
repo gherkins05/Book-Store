@@ -14,7 +14,7 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again later.'
 });
 
-// Apply the rate limit to all requests
+// Apply the rate limit to all of the requests
 app.use(limiter);
 
 // parse application/json

@@ -17,7 +17,7 @@ function loginAttempt() {
         return response.json();
     })
     .then(data => {
-        if (data.success) {
+        if (data.token) {
             localStorage.setItem('token', data.token);
             window.location.href = '/home';
         } else {
